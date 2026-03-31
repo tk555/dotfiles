@@ -25,4 +25,4 @@ vim.o.swapfile = false
 vim.o.title = true
 vim.o.titlelen = 0
 vim.o.titlestring =
-  [[%{buftype == '' ? expand('%:t') : fnamemodify(getcwd(), ':t') .. '/'} (%{fnamemodify(getcwd(), ':~')}) - nvim]]
+  [[%{&buftype == '' ? expand('%:t') : fnamemodify(getcwd(), ':t') .. '/'} (%{fnamemodify(getcwd(), ':~')}) - nvim]]
