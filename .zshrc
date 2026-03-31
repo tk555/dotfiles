@@ -34,3 +34,8 @@ bindkey '^P' history-beginning-search-backward
 bindkey '^N' history-beginning-search-forward
 
 export EDITOR=/usr/local/bin/nvim
+export UV_EXCLUDE_NEWER='1 week'
+export UV_NO_BUILD=1
+export UV_LOCKED=1
+export UV_FROZEN=1
+
