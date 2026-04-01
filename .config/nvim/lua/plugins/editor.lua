@@ -45,8 +45,26 @@ return {
   {
     "nvim-telescope/telescope.nvim",
     opts = {
+      pickers = {
+        find_files = {
+          hidden = true,
+          find_command = { "rg", "--files", "--hidden", "--glob", "!**/.git/*" },
+        },
+      },
       defaults = {
         path_display = { "filename_first" },
+        vimgrep_arguments = {
+          "rg",
+          "--color=never",
+          "--no-heading",
+          "--with-filename",
+          "--line-number",
+          "--column",
+          "--smart-case",
+          "--hidden", -- 隠しファイルを含める
+          "--glob", -- パターン指定
+          "!**/.git/*", -- .gitディレクトリは除外する
+        },
       },
     },
   },
